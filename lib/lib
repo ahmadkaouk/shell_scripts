@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+## \mainpage
+## \section Introduction
+## The os_lib that acts as a library for bash scripts. It provides
+## a couple of functions related to OS
+##
+## @file
+## @author Ahmad KAOUK <ahmadkaouk.93@gmail.com>
+## @brief OS Function Library
+
+## @defgroup system System
+## @defgroup log Log
+
+#################################################################
+# ENVIRONEMENT
+#################################################################
+## @var USEROS 
+##"@brief $(uname)" (read-only)
+## @details running operating system name.
+declare -rx USER_OS="$(uname)" 2>/dev/null;
+
+## @var LINUX_OS
+## @brief ( Linux FreeBSD OpenBSD SunOS ) (read-only)
+## @details List of Linux-like OSs.
+declare -rxa LINUX_OS="(Linux FreeBSD OpenBSD SunOS)" 2>/dev/null;
+
+#################################################################
+# ENVIRONEMENT
+#################################################################
+## @function
+
+
+## functions
+## @function
+
+## Log info message
+echo_info() {
+  local msg="$1"; shift
+  printf "\e[1;32m%s\e[0m\\n" "$msg"
+}
+
+echo_error(){
+    local msg="$1";
+    printf "\e[1;31mError: %s\e[0m\\n" "$msg" 1>&2
+}

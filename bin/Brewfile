@@ -1,0 +1,31 @@
+# Brewfile
+cask_args appdir: "/Applications"
+
+## Packages
+brew 'mas'
+brew 'coreutils'
+brew 'findutils'
+brew 'git'
+brew 'python3'
+brew 'tree'
+brew 'zsh'
+
+## Applications
+# Media
+cask 'calibre'
+cask 'spotify'
+cask 'vlc'
+
+# Productivity
+cask 'google-backup-and-sync'
+cask 'google-chrome'
+cask 'hyper'
+cask 'spectacle'
+cask 'typora'
+
+# Developement
+cask 'visual-studio-code'
+cask 'gitkraken'
+
+## Fonts
+cask 'font-fira-code'

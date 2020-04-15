@@ -1,0 +1,5 @@
+# mac OS files
+.DS_Store
+
+# .lock.json
+*.lock.json
